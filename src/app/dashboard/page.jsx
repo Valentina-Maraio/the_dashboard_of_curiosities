@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/sidebar"
 import { SegmentChart } from "@/components/segment-chart";
 import { SemiChart } from "@/components/semi-chart";
+import { RateChart } from "@/components/rate-chart";
+import { ProgressDemo } from "@/components/progress-demo";
 
 export default function Page() {
   return (
@@ -43,26 +45,27 @@ export default function Page() {
           </Breadcrumb>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+          <div className="grid auto-rows-min gap-4 md:grid-cols-6">
             <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
-            <RoundChart/>
+              <RoundChart />
             </div>
             <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
-            <SemiChart/>
+              <SemiChart />
             </div>
             <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
-            <SegmentChart/>
+              <SegmentChart />
+            </div>
+            <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
+              <RoundChart />
+            </div>
+            <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
+              <SemiChart />
+            </div>
+            <div className="aspect-video rounded-l bg-gray-100/50 dark:bg-gray-800/50">
+              <SegmentChart />
             </div>
           </div>
-          <div
-            className="min-h-[100vh] flex-1 rounded-xl bg-gray-100/50 md:min-h-min dark:bg-gray-800/50" />
-          {Array.from({ length: 1 }).map((_, index) => (
-            <div
-              key={index}
-              className="aspect-video h-12 w-full rounded-lg bg-muted/50"
-            >
-            </div>
-          ))}
+          <RateChart />
         </div>
       </SidebarInset>
     </SidebarProvider>)

@@ -14,6 +14,8 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { CalendarDemo } from "./calendar-demo"
+
 
 // This is sample data.
 const data = {
@@ -107,6 +109,7 @@ export function AppSidebar({
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
+        <CalendarDemo/>
       </SidebarContent>
       <SidebarRail />
     </Sidebar>)
