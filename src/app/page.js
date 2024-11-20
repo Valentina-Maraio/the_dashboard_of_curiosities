@@ -1,17 +1,16 @@
 "use client"
 
-import { Provider } from "@radix-ui/react-tooltip";
+import { Provider as ReduxProvider } from 'react-redux';
+import { Provider as TooltipProvider } from "@radix-ui/react-tooltip";
 import { store } from '../redux/store'
 import Page from "./dashboard/page";
-import { Example } from "@/components/example";
 
 export default function Home() {
   return (
-    <>
-      <Provider store={store}>
+    <ReduxProvider store={store}>
+      <TooltipProvider>
         <Page />
-        <Example />
-      </Provider>
-    </>
+      </TooltipProvider>
+    </ReduxProvider>
   );
 }

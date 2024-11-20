@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import env from 'dotenv'
 
 export const fetchElectionData = createAsyncThunk('election/fetchElectionData', async() => {
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CIVIC_API_KEY;
+    const apiKey = "AIzaSyB4SvlkCA5Nz-trsybOHCAvj58NvxnWTXQ";
     const res = await fetch(`https://www.googleapis.com/civicinfo/v2/elections?key=${apiKey}`);
     const data = await res.json();
     return data.elections;
