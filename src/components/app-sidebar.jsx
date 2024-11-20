@@ -58,23 +58,59 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Accessibility",
+          title: "Voter Demographics",
           url: "#",
         },
         {
-          title: "Fast Refresh",
+          title: "Key Issues",
           url: "#",
         },
         {
-          title: "Next.js Compiler",
+          title: "Political Campaigns",
           url: "#",
         },
         {
-          title: "Supported Browsers",
+          title: "Media & Social Media Sentiment",
           url: "#",
         },
         {
-          title: "Turbopack",
+          title: "Polling Data",
+          url: "#",
+        },
+        {
+          title: "Electoral Dynamics",
+          url: "#",
+        },
+        {
+          title: "PArty Dynamics",
+          url: "#",
+        },
+        {
+          title: "Debates PErformance",
+          url: "#",
+        },
+        {
+          title: "Historical Context",
+          url: "#",
+        },
+        {
+          title: "Technology and Data",
+          url: "#",
+        },
+        {
+          title: "Economica Indicators",
+          url: "#",
+        },
+        {
+          title: "Local / Regional Issues",
+          url: "#",
+        },
+        {
+          title: "Election Integrity",
+          url: "#",
+        },
+        {
+          title: "Post-Election Implications",
           url: "#",
         },
       ],
@@ -109,7 +145,6 @@ export function AppSidebar({
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-        <CalendarDemo/>
       </SidebarContent>
       <SidebarRail />
     </Sidebar>)
