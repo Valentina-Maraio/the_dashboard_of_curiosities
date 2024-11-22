@@ -1,4 +1,6 @@
 import * as React from "react"
+import { useDispatch } from "react-redux";
+import { setSelectedContent } from "@/redux/slice/contentSlice";
 
 import { SearchForm } from "@/components/search-form"
 import { VersionSwitcher } from "@/components/version-switcher"
@@ -17,7 +19,6 @@ import {
 import { CalendarDemo } from "./calendar-demo"
 
 
-// This is sample data.
 const data = {
   versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
   navMain: [
@@ -121,6 +122,11 @@ const data = {
 export function AppSidebar({
   ...props
 }) {
+
+  const dispatch = useDispatch();
+  const handleButtonClick = (content) => {
+    dispatch(setSelectedContent(content)); // Dispatch the action with the selected content
+  };
   return (
     (<Sidebar {...props}>
       <SidebarHeader>
@@ -136,7 +142,7 @@ export function AppSidebar({
               <SidebarMenu>
                 {item.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={item.isActive}>
+                    <SidebarMenuButton asChild isActive={item.isActive} onClick={() => handleButtonClick(item.title)}>
                       <a href={item.url}>{item.title}</a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
